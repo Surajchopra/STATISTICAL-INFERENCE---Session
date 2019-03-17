@@ -1,0 +1,41 @@
+﻿Data Analytics 
+SESSION 9: Statistical Inference 
+Assignment 2 
+
+1. Calculate the P Value for the test in Problem 2.
+2. How do you test the proportions and compare against hypothetical props? Test Hypothesis: proportion of automatic cars is 40%.
+
+Answer:
+
+
+library(IPSUR)
+library(HH) 
+temp <- prop.test(1755, 1755 + 2771, p = 0.4, alternative = "less", + conf.level = 0.99, correct = FALSE) 
+plot(temp, "Hypoth")
+
+library(HH) 
+plot(prop.test(1755, 1755 + 2771, p = 0.4, alternative = "less", conf.level = 0.99, correct = FALSE), 'Hypoth')
+
+
+prop.test(table(mtcars$am)[2],nrow(mtcars),p=0.4,alternative ="less",conf.level =0.99,correct =FALSE)
+
+
+H0 : p=0.4 Ha : p!=0.4 prop.test(table(mtcars$am)[2],nrow(mtcars),p=0.4,alternative ="less",conf.level =0.99,correct =FALSE)
+
+x <- rnorm(37, mean = 2, sd = 3) library(TeachingDemos) z.test(x, mu = 1, sd = 3, conf.level = 0.90)
+
+One Sample z-test
+
+data: x
+z = 2.8126, n = 37.0000, Std. Dev. = 3.0000, Std. Dev. of the
+sample mean = 0.4932, p-value = 0.004914
+alternative hypothesis: true mean is not equal to 1
+90 percent confidence interval:
+1.575948 3.198422
+sample estimates:
+mean of x
+2.387185
+
+
+library(HH) plot(prop.test(1755, 1755 + 2771, p = 0.4, alternative = "less", conf.level = 0.99, correct = FALSE), 'Hypoth')
+
